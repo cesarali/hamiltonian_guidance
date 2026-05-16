@@ -1,0 +1,20 @@
+name: hamiltonian-guidance
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - matplotlib
+  - packaging
+  - python-dateutil
+  - six
+  - tqdm
+  - typing-extensions
+  - pip:
+      - --index-url https://download.pytorch.org/whl/cu126
+      - --extra-index-url https://pypi.org/simple
+      - torch
+      - torchvision
+      - -e .
+variables:
+  PYTHONNOUSERSITE: "1"

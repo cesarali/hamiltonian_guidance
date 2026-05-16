@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hamiltonian-guidance"
+version = "0.1.0"
+description = "Toy Hamiltonian guidance and CLD diffusion experiments."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "matplotlib>=3.7",
+    "torch>=2.0",
+    "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+experiments = [
+    "comet-ml>=3.45",
+    "lightning>=2.2",
+]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.6",
+]
+
+[project.scripts]
+cld-diffusion = "hamiltonian_guidance.cld_diffusion:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
