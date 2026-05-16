@@ -26,6 +26,7 @@ dev = [
 
 [project.scripts]
 cld-diffusion = "hamiltonian_guidance.cld_diffusion:main"
+cfg-diffusion = "hamiltonian_guidance.cfg_diffusion:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
